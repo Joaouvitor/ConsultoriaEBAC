@@ -134,7 +134,8 @@
 	 printf("Esolha a opção desejada:\n\n");  // INICIO DO MENU
 	 printf("\t1- Registrar nomes\n\n");     
 	 printf("\t2- Consultar nomes\n\n");      
- 	 printf("\t3- Deletar nomes\n\n");        
+ 	 printf("\t3- Deletar nomes\n\n");
+	 printf("\t4- Sair do sistema\n\n");        
   	 printf("Opcão:"); //FIM DO MENU
 	
 	 scanf("%d", &opcao);                    // PARA DESTINAR VARIAVEL DO ÚSUARIO Á "int opcao=0"
@@ -152,6 +153,11 @@
 		
 		case 3:
 		deletar();	
+		break;
+		
+		case 4:
+		printf("Obrigado por utilizar o sistema !\n");
+		return 0;
 		break;
 		
 		default:	printf("Essa opção não está disponivel\n");  // PARA ESCOLHAS DIFERENTES DAS DISPONIVEIS
