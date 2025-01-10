@@ -28,10 +28,10 @@
        fclose(file); //USAR SEMPRE PARA FECHAR ARQUIVO
        
        printf("Digite o nome a ser cadastrado: ");
-       scanf("%s",nome);                                // ERRO: ESQUECEU DE COLOCAR "" NA ALOCAÇÃO %s E SENDO ASSIM NÃO EXECUTOU O PROGRAMA TREINAR PARA NÃO ESQUECER MAIS 
+       scanf("%s",nome);                                
 
        
-       file = fopen(arquivo, "a");                      // ERRO: COLOCOU ";" DENTRO DOS COCHETES, PRESTAR ATENÇÃO A ISSO POIS NÃO EXECUTOU O PROGRAMA
+       file = fopen(arquivo, "a");       
        fprintf(file,nome);
        fclose(file);
        
