@@ -120,54 +120,73 @@
 {
 	 int opcao=0; // ESPAÇO PARA ALOCAÇÃO DE VARIAVEIS
 	 int laco=1;
-	
-	 for(laco=1; laco==1;) // PARA RECONDICIONAR AO PONTO DESEJADO OU DE INICIO
-	 {
-		
-	  system("cls");
-	
-	 setlocale(LC_ALL, "Portuguese"); // ALOCAÇÃO DENTRO DA FUNÇÃO PARA LINGUAGEM TEXTUAL
-	
-	
-	 printf("\tCentral de cartório EBAC\n\n\n"); //PRINTF PARA INICIO DE COMANDO PARA INTRODUÇÃO TEXTUAL COM ÚSUARIO
-	
-	 printf("Esolha a opção desejada:\n\n");  // INICIO DO MENU
-	 printf("\t1- Registrar nomes\n\n");     
-	 printf("\t2- Consultar nomes\n\n");      
- 	 printf("\t3- Deletar nomes\n\n");
-	 printf("\t4- Sair do sistema\n\n");        
-  	 printf("Opcão:"); //FIM DO MENU
-	
-	 scanf("%d", &opcao);                    // PARA DESTINAR VARIAVEL DO ÚSUARIO Á "int opcao=0"
-	 system("cls");                          // PARA LIMPAR TELA ANTERIOR 
+	 char senhadigitada[10]= "a";
+	 int comparacao;
 	 
-	 switch(opcao)                          // PARA DAR FUNÇÕES DE ESCOLHAS MINIMIZADAS DIFERENTE DA DETALHADA "IF"
-	 {
+	 setlocale(LC_ALL, "Portuguese");
+	 printf("\tCentral de cartório EBAC\n\n");
+	 printf("Login de administrador\n\nDigite sua senha:");
+	 scanf("%s", senhadigitada);
+	 
+	 comparacao = strcmp(senhadigitada, "admin");
+	 
+	if(comparacao == 0)	 
+	{
+
+	
+		 {
+		
+
+	 
+	     for(laco=1; laco==1;) // PARA RECONDICIONAR AO PONTO DESEJADO OU DE INICIO
+	     {
+		
+	     system("cls");
+	
+	     setlocale(LC_ALL, "Portuguese"); // ALOCAÇÃO DENTRO DA FUNÇÃO PARA LINGUAGEM TEXTUAL
+	
+	
+	     printf("\tCentral de cartório EBAC\n\n\n"); //PRINTF PARA INICIO DE COMANDO PARA INTRODUÇÃO TEXTUAL COM ÚSUARIO
+	
+	     printf("Esolha a opção desejada:\n\n");  // INICIO DO MENU
+	     printf("\t1- Registrar nomes\n\n");     
+	     printf("\t2- Consultar nomes\n\n");      
+ 	     printf("\t3- Deletar nomes\n\n");
+	     printf("\t4- Sair do sistema\n\n");        
+  	     printf("Opcão:"); //FIM DO MENU
+	
+	     scanf("%d", &opcao);                    // PARA DESTINAR VARIAVEL DO ÚSUARIO Á "int opcao=0"
+	     system("cls");                          // PARA LIMPAR TELA ANTERIOR 
+	 
+	     switch(opcao)                          // PARA DAR FUNÇÕES DE ESCOLHAS MINIMIZADAS DIFERENTE DA DETALHADA "IF"
+	     {
 	 	case 1:
 	 	registro();     // CHAMAR FUNÇÕES EX: "int registro"
-		break;
+	 	break;
 		
-		case 2:
-		consulta();	
-		break;
+	 	case 2:
+	 	consulta();	
+	 	break;
 		
-		case 3:
-		deletar();	
-		break;
+	 	case 3:
+	 	deletar();	
+	 	break;
+	 	
+	 	case 4:
+	 	printf("Obrigado por utilizar o sistema !\n");
+	 	return 0;
+	 	break;
 		
-		case 4:
-		printf("Obrigado por utilizar o sistema !\n");
-		return 0;
-		break;
-		
-		default:	printf("Essa opção não está disponivel\n");  // PARA ESCOLHAS DIFERENTES DAS DISPONIVEIS
-		system("pause");
+	 	default:	printf("Essa opção não está disponivel\n");  // PARA ESCOLHAS DIFERENTES DAS DISPONIVEIS
+	 	system("pause");
 					
-	 }
+	     }
+    
+	 }     	 
 }
-	 
+     }else
+     printf("Senha incorreta!");
 }
-
 
 
  
